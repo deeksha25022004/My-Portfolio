@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- <link rel="icon" type="image/svg+xml" href="/dev-icon.png"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" crossorigin="" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+
+<body id="top">
+    <nav class="navbar">
+        <img src="images/logo.png" alt="Logo" class="light-mode-img">
+        <img src="images/logo2.png" alt="Logo" class="dark-mode-img">
+
+        <ul class="nav-links">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#work">My Work</a></li>
+            <li><a href="#contact">Contact me</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <button class="mode" id="modeToggle">
+                <div class="lightmode">
+                    <img src="images/lightmode.png" alt="lightmode">
+                </div>
+                <div class="darkmode">
+                    <img src="images/nightmode.png" alt="darkmode">
+                </div>
+            </button>
+
+            <a href="#contact" class="contact-btn">
+                Contact
+                <img class="arrow-white" src="images/arrow_white.png" alt="arrow_white">
+                <img class="arrow-black" src="images/arrow.png" alt="arrow_black">
+            </a>
+
+            <button class="bars" onclick="openNav()">
+                <img src="images/bars_white.png" alt="bars" class="bars_white">
+                <img src="images/bars_black.png" alt="bars" class="bars_black">
+            </button>
+        </div>
+
+        <ul class="mobile-menu">
+            <div class="mobile-menu-toggle" onclick="closeNav()">
+                <img src="images/close_white.png" alt="close_btn" class="close_white">
+                <img src="images/close_black.png" alt="close_btn" class="close_black">
+            </div>
+            <li><a href="#top">Home</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#work">My Work</a></li>
+            <li><a href="#contact">Contact me</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-section">
+        <!-- <img src="images/profile-img.png" alt="Profile Image" class="profile-img"> -->
+        <h3 class="intro-text">
+            >Hi! I'm <span class="highlight">Deeksha Singh</span>
+        </h3>
+        <h1 class="hero-title">
+            Data Science Enthusiast
+        </h1>
+        <p class="hero-description">
+            I am a passionate Data Science enthusiast, continuously expanding my expertise in data analysis,
+            visualization, and machine learning.
+        </p>
+        <div class="hero-buttons">
+            <a href="#contact" class="contact-me-btn">
+                Contact Me
+                <img src="images/arrow_right.png" alt="Arrow Icon">
+            </a>
+            <a href="Deeksha Resume.pdf" download="Deeksha_Resume" class="resume-btn">
+                My Resume
+                <img src="images/download_btn.png" alt="Download Icon">
+            </a>
+        </div>
+    </div>
+
+
+    <div id="about" class="about-section">
+        <h4 class="section-intro">Introduction</h4>
+        <h2 class="section-title">About me</h2>
+        <div class="about-content">
+            <div class="profile-container">
+                <img src="images/user-image.png" alt="" class="profile-image">
+            </div>
+            <div class="about-info">
+                <p class="about-description">
+                    I am a passionate Data Science enthusiast, continuously expanding my expertise in data analysis,
+                    visualization, and machine learning. Currently, I am learning advanced machine learning techniques
+                    to extract meaningful insights from data and build predictive models.
+                </p>
+                <ul class="about-details">
+                    <li class="detail-box">
+                        <img src="images/brackets_white.png" alt="brackets" class="detail-icon brackets-white">
+                        <img src="images/brackets.png" alt="brackets" class="detail-icon brackets-black">
+                        <h3 class="detail-title">Skills</h3>
+                        <p class="detail-text">Python,Basics Java ,Numpy, Pandas, Matplotlib, Seaborn, Scikit Learn,
+                            Machine Learning, Deep Learning, NLP</p>
+                    </li>
+                    <li class="detail-box">
+                        <img src="images/hat_white.png" alt="hat" class="detail-icon hat-white">
+                        <img src="images/hat_black.png" alt="hat" class="detail-icon hat-black">
+                        <h3 class="detail-title">Education</h3>
+                        <p class="detail-text">Bachelor of Technology in Computer Science and Engineering.</p>
+                    </li>
+                    <li class="detail-box">
+                        <img src="images/bag_white.png" alt="bag" class="detail-icon bag_white">
+                        <img src="images/bag_black.png" alt="bag" class="detail-icon bag_black">
+                        <h3 class="detail-title">Projects</h3>
+                        <p class="detail-text">Built more than 4 projects using Machine Learning and deep learning
+                            techniques.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="work" class="work-section">
+        <h4 class="portfolio-title">My portfolio</h4>
+        <h2 class="latest-work">My latest work</h2>
+        <p class="portfolio-description">
+            Welcome to my Data Science portfolio! Explore a collection of projects showcasing my expertise in Machine
+            Learning & Deep Learning Models.
+        </p>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-item work-1">
+                <div class="portfolio-info">
+                    <div>
+                        <h2 class="project-title">Fashion Item Classifier Project</h2>
+                        <p class="project-category">Deep Learning</p>
+                    </div>
+                    <div class="visit-button">
+                        <img src="images/visit_arrow.png" alt="" class="visit-icon">
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item work-2">
+                <a href="https://github.com/deeksha25022004/LinkedIn-Job-data-Scrapper-" class="portfolio-info"
+                    target="_blank">
+                    <div>
+                        <h2 class="project-title">Linkedin Job Scrapper</h2>
+                        <p class="project-category">BeautifulSoup</p>
+                    </div>
+                    <div class="visit-button">
+                        <img src="images/visit_arrow.png" alt="" class="visit-icon">
+                    </div>
+                </a>
+            </div>
+
+            <div class="portfolio-item work-3">
+                <a href="https://github.com/deeksha25022004/Resume-Analyzer-for-Keywords-and-skills-using-NLP"
+                    class="portfolio-info" target="_blank">
+                    <div>
+                        <h2 class="project-title">Resume Analyzer for Keyword and skills using NLP</h2>
+                        <p class="project-category">Natural Language processing</p>
+                    </div>
+                    <div class="visit-button">
+                        <img src="images/visit_arrow.png" alt="" class="visit-icon">
+                    </div>
+                </a>
+            </div>
+
+            <div class="portfolio-item work-4">
+                <a href="https://github.com/deeksha25022004/Internshala-Training-Projects" class="portfolio-info"
+                    target="_blank">
+                    <div>
+                        <h2 class="project-title">Internshala Training Project</h2>
+                        <p class="project-category">Machine Learning models</p>
+                    </div>
+                    <div class="visit-button">
+                        <img src="images/visit_arrow.png" alt="Visit_btn" class="visit-icon">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <a href="https://github.com/deeksha25022004" class="show-more" target="_blank">
+            Show more
+            <img src="images/arrow_right.png" alt="" class="show-more-icon">
+        </a>
+    </div>
+
+
+
+    <div id="contact" class="contact-section">
+        <h4 class="connect-title">Connect with me</h4>
+        <h2 class="contact-heading">Get in touch</h2>
+        <p class="contact-description">
+            I'd love to hear from you! If you have any questions, comments, or feedback, please use the form below.
+        </p>
+
+        <form class="contact-form">
+            <input type="hidden" name="subject" value="New form Submission">
+
+            <div class="input-group">
+                <input type="text" placeholder="Enter your name" required name="name" class="contact-input" required>
+                <input type="email" placeholder="Enter your email" required name="email" class="contact-input" required>
+            </div>
+
+            <textarea rows="15" placeholder="Enter your message" required name="message"
+                class="contact-textarea"></textarea>
+
+            <button type="submit" class="submit-button">
+                Submit now
+                <img src="images/arrow_right.png" alt="submit-icon" class="submit-icon">
+            </button>
+        </form>
+    </div>
+
+
+
+    <div class="footer">
+        <div class="footer-top">
+            <img src="images/logo.png" alt="Logo" class="light-mode-img footer-logo">
+            <img src="images/logo2.png" alt="Logo" class="dark-mode-img footer-logo">
+            <div class="contact-info">
+                <img src="images/mail.png" alt="Mail Icon" class="mail-icon">
+                deeksha25022004@gmail.com
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Deeksha Singh. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a target="_blank" href="https://github.com/deeksha25022004">GitHub</a></li>
+                <li><a target="_blank" href="www.linkedin.com/in/deeksha-singh2502">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Custom JS File -->
+    <script src="script.js"></script>
+</body>
+
+</html>
