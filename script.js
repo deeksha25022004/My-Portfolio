@@ -1,13 +1,3 @@
-//Navbar Effect
-window.addEventListener("scroll", function () {
-  const navbar = document.querySelector("nav");
-  if (window.scrollY > 50) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
-  }
-});
-
 //Light_Dark Mode
 const modeToggle = document.getElementById("modeToggle");
 
@@ -28,14 +18,23 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   });
 });
-// Mobile View
-function openNav() {
-  document.querySelector(".mobile-menu").style.right = "0rem";
-}
 
-function closeNav() {
-  document.querySelector(".mobile-menu").style.right = "-16rem";
-}
+// Mobile View
+document.addEventListener("DOMContentLoaded", function () {
+  const menuButton = document.querySelector(".bars");
+  const mobileMenu = document.querySelector(".mobile-menu");
+  const closeButton = document.querySelector(".mobile-menu-toggle");
+
+  // Show the mobile menu
+  menuButton.addEventListener("click", () => {
+    mobileMenu.style.display = "flex";
+  });
+
+  // Hide the mobile menu
+  closeButton.addEventListener("click", () => {
+    mobileMenu.style.display = "none";
+  });
+});
 
 //typed text
 var typed = new Typed(".hero-title", {

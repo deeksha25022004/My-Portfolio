@@ -9,7 +9,6 @@
 }
 
 body {
-  overflow-x: hidden;
   line-height: 2;
   transition: background-color 0.3s ease;
   background-color: rgb(17, 0, 31);
@@ -32,10 +31,8 @@ body.light-mode * {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 50;
+  z-index: 40;
   position: sticky;
-}
-nav.scrolled {
   background-color: transparent;
   background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
@@ -43,7 +40,7 @@ nav.scrolled {
 }
 
 /* Logo styles */
-.navbar img {
+.logo {
   width: 12rem;
   margin-right: 3.5rem;
 }
@@ -69,7 +66,6 @@ nav.scrolled {
   align-items: center;
   gap: 2.5rem;
   padding: 0.75rem 3rem;
-  /* font-family: "Ovo", serif; */
   border-radius: 9999px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   background: transparent;
@@ -118,7 +114,6 @@ body.light-mode .mode .darkmode {
   padding: 0.625rem 2rem;
   border: 1px solid gray;
   border-radius: 9999px;
-  /* font-family: "Ovo", serif; */
   margin-left: 1rem;
 }
 
@@ -169,8 +164,15 @@ body.light-mode .mode .darkmode {
 }
 
 @media (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
   .navbar {
     padding: 1rem 2rem;
+  }
+
+  .nav-right {
+    gap: 2.5rem;
   }
 
   .nav-links {
@@ -188,20 +190,18 @@ body.light-mode .mode .darkmode {
 
 /* Mobile Menu */
 .mobile-menu {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 1rem;
   padding: 5rem 2.5rem;
   position: fixed;
-  right: -16rem;
+  right: 0;
   top: 0;
-  bottom: 0;
   width: 16rem;
   height: 100vh;
   z-index: 50;
   background: rgb(42, 0, 74);
-  /* font-family: "Ovo", serif; */
-  transition: 0.5s;
+  transition: 0.5s ease-in-out;
   color: white;
 }
 
@@ -221,6 +221,21 @@ body.light-mode .mode .darkmode {
   width: 30px;
 }
 
+@media (max-width: 425px) {
+  .navbar {
+    padding: 1rem 1rem;
+  }
+
+  .nav-right {
+    gap: 2.5rem;
+  }
+
+  .logo {
+    width: 8rem;
+    margin-right: 3.5rem;
+  }
+}
+
 .close_black {
   display: none;
 }
@@ -236,14 +251,11 @@ body.light-mode .mode .darkmode {
 /* Hero Section */
 .hero-section {
   width: 100%;
-  /* max-width: 768px; */
   margin: auto;
   height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
-  /* gap: 16px; */
   text-align: center;
 }
 
@@ -253,7 +265,6 @@ body.light-mode .mode .darkmode {
   align-items: flex-end;
   gap: 10px;
   font-size: 6rem;
-  /* font-family: "Ovo", serif; */
 }
 
 .highlight {
@@ -271,7 +282,6 @@ body.light-mode .mode .darkmode {
 .hero-title {
   font-size: 3.5rem;
   font-weight: bold;
-  /* font-family: "Ovo", serif; */
   height: 5rem;
   transition: all 0.3s ease-in-out;
 }
@@ -280,7 +290,6 @@ body.light-mode .mode .darkmode {
 .hero-description {
   max-width: 600px;
   margin: 2rem auto;
-  /* font-family: "Ovo", serif; */
   font-size: 1.2rem;
 }
 
@@ -326,7 +335,7 @@ body.light-mode .mode .darkmode {
     font-size: 2rem;
   }
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -362,13 +371,11 @@ body.light-mode .mode .darkmode {
 .about-section {
   width: 100%;
   padding: 40px 10%;
-  /* scroll-margin-top: 80px; */
   text-align: center;
 }
 
 /* Section Headings */
 .section-intro {
-  /* margin-bottom: 8px; */
   font-size: 1.5rem;
 }
 
@@ -383,7 +390,6 @@ body.light-mode .mode .darkmode {
   align-items: center;
   gap: 80px;
   margin-top: 40px;
-  /* background-color: #da7d20; */
 }
 
 @media (min-width: 1024px) {
@@ -413,7 +419,6 @@ body.light-mode .mode .darkmode {
 .about-description {
   margin-bottom: 40px;
   max-width: 640px;
-  /* background-color: red; */
 }
 
 /* About Details */
@@ -514,7 +519,6 @@ body.light-mode .mode .darkmode {
 .work-section {
   width: 100%;
   padding: 5rem 0;
-  /* scroll-margin-top: 20px; */
   text-align: center;
 }
 
